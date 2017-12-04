@@ -1,0 +1,18 @@
+<p class="col-sm-12 text-center lead">
+  Hello! Create a customized retro jersey for yourself.
+</p>
+
+<app-jersey-style
+  (selectBaseEvent)="selectBaseHandler($event)"></app-jersey-style>
+
+
+ <app-jersey-text
+  *ngIf="jersey.base"
+  (selectFontEvent)="selectFontHandler($event)"
+  (selectJerseyNumberEvent)="selectNumberHandler($event)"
+  (addTextEvent)="addTextHandler($event)" (selectPrimaryColorEvent)="selectPriColorHandler($event)" (selectSecondaryColorEvent)="selectSecColorHandler($event)"></app-jersey-text>
+
+ <app-jersey-extras *ngIf="jersey.base" (selectBadgeEvent)="selectBadgeHandler($event)" (selectBadgePositionEvent)="selectBadgePositionHandler($event)"></app-jersey-extras>
+
+
+ <app-jersey-preview *ngIf="jersey && jersey.base" [jersey]="jersey"></app-jersey-preview>

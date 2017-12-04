@@ -1,0 +1,33 @@
+:host {
+  border-bottom: 1px solid #ccc;
+  display: block;
+  margin: 20px 0;
+  padding-bottom: 20px;
+}
+
+.pos_home {
+	display: grid;
+	/*padding-left: 20px;*/
+	/*padding-right: 20px;*/
+	/*margin-left: 50px;*/
+	/*margin-right: 50px;  */
+	grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
+	/*grid-column-gap: 20px;*/
+}
+
+.pos_home .pos_dis {
+	justify-content: space-between;
+} 
+
+.t-center {
+	text-align: center;
+}
+
+.t-left {
+	text-align: left;
+	grid-column: 2;
+}
+
+.t-right {
+	text-align: right;
+}

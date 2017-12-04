@@ -1,0 +1,80 @@
+<div class="row">
+  <div class="col-sm-12 text-center">
+    <h3>Badges and Crests</h3>
+    <p class="form-text text-muted">Select any crest you would like for your jersey.</p>
+  </div>
+</div>
+
+<div class="row">
+  <label class="jerseyStyle col-sm-3">
+    <img src="/assets/images/Botafogo.svg">
+    <input
+      type="radio"
+      name="badge"
+      [(ngModel)]="jerseyBadge"
+      (change)="selectBadge(jerseyBadge)"
+      value="Botafogo.svg">
+  </label>
+  <label class="jerseyStyle col-sm-3">
+    <img src="/assets/images/Club_Bolivar.svg">
+    <input
+      type="radio"
+      name="badge"
+      [(ngModel)]="jerseyBadge"
+      (change)="selectBadge(jerseyBadge)"
+      value="Club_Bolivar.svg">
+  </label>
+  <label class="jerseyStyle col-sm-3">
+    <img src="/assets/images/UEFA_Champions_League_logo_2.svg">
+    <input
+      type="radio"
+      name="badge"
+      [(ngModel)]="jerseyBadge"
+      (change)="selectBadge(jerseyBadge)"
+      value="UEFA_Champions_League_logo_2.svg">
+  </label>
+  <label class="jerseyStyle col-sm-3">
+    <img src="/assets/images/Bayern_Munich_Banner.svg">
+    <input
+      type="radio"
+      name="badge"
+      [(ngModel)]="jerseyBadge"
+      (change)="selectBadge(jerseyBadge)"
+      value="Bayern_Munich_Banner.svg">
+  </label>
+</div>
+
+<div class="row">
+	<div class="col-sm-12 text-center">
+		<p class="form-text">
+		Select the position of the badge
+	</p>
+	</div>
+</div>
+<div class="row pos_home">
+	<label class="pos_dis t-left">Left
+    <input
+      type="radio"
+      name="badge_position"
+      [(ngModel)]="jerseyBadgePosition"
+      (change)="selectBadgePosition(jerseyBadgePosition)"
+      value="left">
+  </label>
+
+  <label class="pos_dis t-center">Center
+    <input
+      type="radio"
+      name="badge_position"
+      [(ngModel)]="jerseyBadgePosition"
+      (change)="selectBadgePosition(jerseyBadgePosition)"
+      value="center">
+  </label>
+  <label class="pos_dis t-right">
+    <input
+      type="radio"
+      name="badge_position"
+      [(ngModel)]="jerseyBadgePosition"
+      (change)="selectBadgePosition(jerseyBadgePosition)"
+      value="right">Right
+  </label>
+</div>

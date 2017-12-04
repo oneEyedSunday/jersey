@@ -1,0 +1,48 @@
+<div class="row">
+  <div class="col-sm-12 text-center">
+    <h3>Base Jersey</h3>
+    <p class="form-text text-muted">Choose a base jersey style to get started!</p>
+  </div>
+</div>
+
+<div class="row">
+  <label class="jerseyStyle col-sm-3">
+    <img src="/assets/images/ajax.svg">
+    <input
+      type="radio"
+      name="base"
+      [(ngModel)]="jerseyStyle"
+      (change)="selectBase(jerseyStyle)"
+      value="ajax">
+  </label>
+		
+	<label class="jerseyStyle col-sm-3">
+    <img src="/assets/images/plain.svg">
+    <input
+      type="radio"
+      name="base"
+      [(ngModel)]="jerseyStyle"
+      (change)="selectBase(jerseyStyle)"
+      value="plain">
+  </label>
+
+  <label class="jerseyStyle col-sm-3">
+    <img src="/assets/images/stripped.svg">
+    <input
+      type="radio"
+      name="base"
+      [(ngModel)]="jerseyStyle"
+      (change)="selectBase(jerseyStyle)"
+      value="stripped">
+  </label>
+	
+	<label class="jerseyStyle col-sm-3">
+    <img src="/assets/images/peru.svg">
+    <input
+      type="radio"
+      name="base"
+      [(ngModel)]="jerseyStyle"
+      (change)="selectBase(jerseyStyle)"
+      value="peru">
+  </label>
+</div>

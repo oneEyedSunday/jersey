@@ -1,0 +1,71 @@
+<div class="row">
+  <div class="col-sm-12 text-center">
+    <h3>Text</h3>
+    <p class="form-text text-muted">
+      Select your desired font style and enter some text for the front of the jersey.<br>
+      You can see what your jersey will look like in the preview below.
+    </p>
+  </div>
+</div>
+
+<div class="form-group row">
+  <label for="font" class="col-sm-2 offset-sm-2 col-form-label">Primary color:</label>
+  <input
+    id="jerseyPrimaryColor"
+    type="color"
+    class="form-control col-sm-6 height-fix"
+    [(ngModel)]="jerseyPrimaryColorInput"
+    (input)="selectPrimaryColor(jerseyPrimaryColorInput)"
+     />
+</div>
+
+<div class="form-group row">
+  <label for="font" class="col-sm-2 offset-sm-2 col-form-label">Secondary color:</label>
+  <input
+    id="jerseySecondaryColor"
+    type="color"
+    class="form-control col-sm-6 height-fix"
+    [(ngModel)]="jerseySecondaryColorInput"
+    (input)="selectSecondaryColor(jerseySecondaryColorInput)"
+     />
+</div>
+
+
+<div class="form-group row">
+  <label for="font" class="col-sm-2 offset-sm-2 col-form-label">Font:</label>
+  <select
+    id="font"
+    name="font"
+    class="form-control col-sm-6"
+    [(ngModel)]="fontType"
+    (change)="selectFont(fontType)">
+      <option value="sans-serif" style="font-family: sans-serif;">Sans-serif</option>
+      <option value="serif" style="font-family: serif;">Serif</option>
+      <option value="Helvetica" style="font-family: helvetica">Helvetica</option>
+      <option value="Leto" style="font-family: Leto;">Leto</option>
+  </select>
+</div>
+
+<div class="form-group row">
+  <label for="jerseyText" class="col-sm-2 offset-sm-2 col-form-label">Text:</label>
+  <input
+    id="jerseyText"
+    type="text"
+    class="form-control col-sm-6"
+    [(ngModel)]="jerseyTextInput"
+    (input)="addText(jerseyTextInput)"
+    maxlength="8" />
+</div>
+
+<div class="form-group row">
+  <label for="jerseyNumber" class="col-sm-2 offset-sm-2 col-form-label">Number:</label>
+  <input
+    id="jerseyNumber"
+    type="number"
+    max="99"
+    min="1"
+    class="form-control col-sm-6"
+    [(ngModel)]="jerseyNumberInput"
+    (input)="selectNumber(jerseyNumberInput)"
+     />
+</div>
