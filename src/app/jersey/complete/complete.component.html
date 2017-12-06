@@ -1,3 +1,14 @@
-<p>
-  complete works!
-</p>
+<div *ngIf="jersey.complete">
+  <div class="row">
+    <p class="col-sm-12 alert alert-success">
+      <strong>Congratulations!</strong> You've created a custom jersey. Would you like to <a (click)="newJersey()" routerLink="/jersey/create" class="alert-link">create another?</a>
+    </p>
+  </div>
+  <app-jersey-preview [jersey]="jersey"></app-jersey-preview>
+</div>
+
+<div *ngIf="!jersey.complete" class="row">
+  <p class="col-sm-12 alert alert-danger">
+    <strong>Oops!</strong> You haven't customized a jersey yet. <a routerLink="/jersey/create" class="alert-link">Click here to create one now.</a>
+  </p>
+</div>

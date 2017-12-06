@@ -29,15 +29,15 @@ export class JerseyPreviewComponent implements OnChanges, AfterViewInit {
 
   ngOnChanges(changes: SimpleChanges) {
   	this.loaded = this.s ? true : false;
-  	this.badgeSrc = `/assets/images/${this.jersey.badge}.svg`;
+  	this.badgeSrc = `assets/images/${this.jersey.badge}.svg`;
   	if(changes.jersey.previousValue !== undefined){
   		if(changes.jersey.currentValue.base !== changes.jersey.previousValue.base){
-  			this.svgSrc = this.sanitizer.bypassSecurityTrustResourceUrl(`/assets/images/${this.jersey.base}.svg`);
+  			this.svgSrc = this.sanitizer.bypassSecurityTrustResourceUrl(`assets/images/${this.jersey.base}.svg`);
   			console.log("reassignment of src");	
   			// if source changed, call prepFills to redraw.
   		}
   	}else {
-  		this.svgSrc = this.sanitizer.bypassSecurityTrustResourceUrl(`/assets/images/${this.jersey.base}.svg`);
+  		this.svgSrc = this.sanitizer.bypassSecurityTrustResourceUrl(`assets/images/${this.jersey.base}.svg`);
   	}
 
   	this.priColor = this.jersey.pricolor;
@@ -115,7 +115,7 @@ export class JerseyPreviewComponent implements OnChanges, AfterViewInit {
   		// check length
   		// offset based on length
   		t.setAttribute('y', '250');
-  		if(this.text.length < 7 ){
+  		if(this.text.length < 5 ){
   			t.setAttribute('x', '180');
   		}else {
   			t.setAttribute('x', '150');

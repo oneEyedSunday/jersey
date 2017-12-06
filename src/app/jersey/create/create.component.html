@@ -16,3 +16,15 @@
 
 
  <app-jersey-preview *ngIf="jersey && jersey.base" [jersey]="jersey"></app-jersey-preview>
+
+ <div class="row">
+ 	<div class="col-sm-12 text-center">
+ 		<p class="form-text text-muted" *ngIf="jersey.base">
+ 			Preview your jersey above. <br>
+ 			Click the button below when you're happy with the changes.
+ 		</p>
+ 		<p>
+ 			<button class="btn btn-success btn-lg" *ngIf="jersey.base" [disabled]="!done" (click)="submit()" routerLink="/jersey/complete">Done</button>
+ 		</p>
+ 	</div>
+ </div>

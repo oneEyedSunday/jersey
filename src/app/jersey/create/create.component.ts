@@ -30,7 +30,7 @@ export class CreateComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.jerseyStateSubscription = this.jerseyState$.subscribe((state) => {
       this.jersey = state;
-      this.done = !!(this.jersey.text && this.jersey.number);
+      this.done = !!(this.jersey.base && this.jersey.number);
     });
   }
 
