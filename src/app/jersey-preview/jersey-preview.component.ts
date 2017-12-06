@@ -175,7 +175,7 @@ export class JerseyPreviewComponent implements OnChanges, AfterViewInit, OnDestr
 
   private writeBlobToLocalStorage(){
   	let serializer = new XMLSerializer();
-  	let data = serializer.serializeToString(this.s).replace('href=', 'href="assets/images/');
+  	let data = serializer.serializeToString(this.s).replace('href="', 'href="assets/images/');
     console.log()
   	localStorage.setItem("saved-blob", data);
   }
