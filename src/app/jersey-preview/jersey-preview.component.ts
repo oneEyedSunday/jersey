@@ -156,7 +156,7 @@ export class JerseyPreviewComponent implements OnChanges, AfterViewInit, OnDestr
 	  	b.setAttribute('y', '140');
 	  	b.setAttribute('width', '50');
 	  	b.setAttribute('height', '50');
-	  	b.setAttribute('href', `assets/images/${this.jersey.badge}`);
+	  	b.setAttribute('href', `${this.jersey.badge}`);
 	  	switch (position) {
 	  		case "left":
 	  			b.setAttribute('x', '160');
