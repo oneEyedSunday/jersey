@@ -1,7 +1,8 @@
 <div *ngIf="jersey.base" class="row view-wrapper">
 	<div class="col-sm-12">
 		<div class="jerseyView">
-			<object #test [data]=svgSrc type="image/svg+xml" id="previewJersey" class="jerseyView"></object>
+			<object #test *ngIf="!context" [data]=svgSrc type="image/svg+xml" id="previewJersey" class="jerseyView"></object>
+			<div #edited *ngIf="context"></div>
 		</div>
 	</div>
 </div>

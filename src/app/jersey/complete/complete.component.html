@@ -4,7 +4,7 @@
       <strong>Congratulations!</strong> You've created a custom jersey. Would you like to <a (click)="newJersey()" routerLink="/jersey/create" class="alert-link">create another?</a>
     </p>
   </div>
-  <app-jersey-preview [jersey]="jersey"></app-jersey-preview>
+  <app-jersey-preview [jersey]="jersey" [context]="context"></app-jersey-preview>
 </div>
 
 <div *ngIf="!jersey.complete" class="row">

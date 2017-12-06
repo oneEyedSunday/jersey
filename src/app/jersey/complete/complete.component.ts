@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, OnDestroy, ViewEncapsulation, ViewChild, ElementRef } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { Subscription } from 'rxjs/Subscription';
 import { Store } from '@ngrx/store';
@@ -16,15 +16,22 @@ export class CompleteComponent implements OnInit, OnDestroy {
   jerseyState$: Observable<Jersey>;
   private jerseyStateSubscription: Subscription;
   jersey: Jersey;
+  context = true;
+
+  @ViewChild('test') test: ElementRef;
+
 
   constructor(private store: Store<Jersey>) {
   	this.jerseyState$ = store.select(getJersey);
   }
 
   ngOnInit() {
+  	let oDom = new DOMParser();
+
   	this.jerseyStateSubscription = this.jerseyState$.subscribe((state) => {
   		this.jersey = state;
   	});
+  	// might not need subscription tho;
   }
 
   ngOnDestroy(){

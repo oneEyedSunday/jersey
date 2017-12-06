@@ -98,7 +98,6 @@ export class CreateComponent implements OnInit, OnDestroy {
     this.store.dispatch({
       type: fromActions.COMPLETE,
       payload: true
-    })
+    });
   }
-
 }
